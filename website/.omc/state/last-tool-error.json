@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"cd \\\"D:/Project/ai_project/Hermes-Agent-Doc-CN/website\\\" && npm run build 2>&1\",\"timeout\":300000}",
+  "error": "Exit code 1\n\n> hermes-agent-docs@1.0.0 build\n> docusaurus build\n\n\n ------------------------------------------------------------------------------                                                                                                         Update available 3.7.0 → 3.10.0                                                                                                                 To upgrade Docusaurus packages with the latest version, run the                                       foll...",
+  "timestamp": "2026-04-08T10:59:19.903Z",
+  "retry_count": 1
+}

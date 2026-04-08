@@ -206,7 +206,7 @@ DevOps 和基础设施自动化技能。
 | `hermes-atropos-environments` | 为 Atropos 训练构建、测试和调试 Hermes Agent RL 环境。涵盖 HermesAgentBaseEnv 接口、奖励函数、代理循环集成、使用工具评估、wandb 日志记录和三个 CLI 模式（serve/process/evaluate）。创建、审查或完善 Atropos 训练环境时使用。 | `mlops/training/hermes-atropos-environments` |
 | `huggingface-accelerate` | 最简单的分布式训练 API。仅需 4 行代码即可为任何 PyTorch 脚本添加分布式支持。DeepSpeed/FSDP/Megatron/DDP 统一 API。自动设备放置、混合精度（FP16/BF16/FP8）。交互式配置、单次启动命令。HuggingFace 生态系统标准。 | `mlops/training/accelerate` |
 | `optimizing-attention-flash` | 使用 Flash Attention 优化 transformer attention，实现 2-4 倍加速和 10-20 倍内存降低。在长序列（>512 tokens）上训练/运行 transformers、遇到 GPU 内存问题时使用。 | `mlops/training/flash-attention` |
-| `peft-fine-tuning` | 使用 LoRA、QLoRA 和 25+ 方法对 LLMs 进行参数高效微调。在 GPU 内存有限时微调大模型（7B-70B）、需要训练 <1% 参数且精度损失最小时使用。 | `mlops/training/peft` |
+| `peft-fine-tuning` | 使用 LoRA、QLoRA 和 25+ 方法对 LLMs 进行参数高效微调。在 GPU 内存有限时微调大模型（7B 到 70B）、需要训练小于 1% 参数且精度损失最小时使用。 | `mlops/training/peft` |
 | `pytorch-fsdp` | 使用 PyTorch FSDP 进行完全分片数据并行训练的专家指导——参数分片、混合精度、CPU 卸载、FSDP2 | `mlops/training/pytorch-fsdp` |
 | `pytorch-lightning` | 高层次 PyTorch 框架，带 Trainer 类、自动分布式训练（DDP/FSDP/DeepSpeed）、回调系统和最小样板。从笔记本扩展到超级计算机，代码相同。需要内置最佳实践的清晰训练循环时使用。 | `mlops/training/pytorch-lightning` |
 | `simpo-training` | LLM 对齐的简单偏好优化。比 DPO 更好的无参考模型替代方案（AlpacaEval 2.0 上高 6.4 分）。无需参考模型，比 DPO/PPO 更高效。在想要比 DPO/PPO 更简单、更快的训练进行偏好对齐时使用。 | `mlops/training/simpo` |
@@ -221,7 +221,7 @@ DevOps 和基础设施自动化技能。
 |-------|-------------|------|
 | `chroma` | 用于 AI 应用的开源嵌入数据库。存储嵌入和元数据、执行向量和全文搜索、按元数据过滤。简单 4 函数 API。从笔记本扩展到生产集群。用于语义搜索、RAG 应用或文档检索。 | `mlops/vector-databases/chroma` |
 | `faiss` | Facebook 的高效相似性搜索和稠密向量聚类库。支持数十亿向量、GPU 加速和各种索引类型（Flat、IVF、HNSW）。用于快速 k-NN 搜索、大规模向量检索或需要纯相似性搜索时。 | `mlops/vector-databases/faiss` |
-| `pinecone` | 用于生产 AI 应用的托管向量数据库。完全托管、自动扩展，具有混合搜索（稠密 + 稀疏）、元数据过滤和命名空间。低延迟（<100ms p95）。用于生产 RAG、推荐系统或大规模语义搜索。 | `mlops/vector-databases/pinecone` |
+| `pinecone` | 用于生产 AI 应用的托管向量数据库。完全托管、自动扩展，具有混合搜索（稠密 + 稀疏）、元数据过滤和命名空间。低延迟（低于 100ms p95）。用于生产 RAG、推荐系统或大规模语义搜索。 | `mlops/vector-databases/pinecone` |
 | `qdrant-vector-search` | 用于 RAG 和语义搜索的高性能向量相似性搜索引擎。用于构建需要快速最近邻搜索、带过滤的混合搜索或 Rust 驱动性能的可扩展向量存储的生产 RAG 系统。 | `mlops/vector-databases/qdrant` |
 
 ## note-taking

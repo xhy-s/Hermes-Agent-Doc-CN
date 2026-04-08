@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Web Search",
+    "description": "Search the web for information",
+    "icon": "🔍",
+    "commands": ["/web-search", "/search"],
+    "category": "productivity"
+  },
+  {
+    "name": "File Operations",
+    "description": "Read, write, and manage files",
+    "icon": "📁",
+    "commands": ["/file", "/read", "/write"],
+    "category": "developer"
+  },
+  {
+    "name": "Code Analysis",
+    "description": "Analyze and review code",
+    "icon": "🔍",
+    "commands": ["/analyze", "/review"],
+    "category": "developer"
+  },
+  {
+    "name": "Git Operations",
+    "description": "Git workflow automation",
+    "icon": "📦",
+    "commands": ["/git", "/commit", "/push"],
+    "category": "developer"
+  }
+]

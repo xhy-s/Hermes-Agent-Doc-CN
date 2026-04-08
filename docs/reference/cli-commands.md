@@ -426,9 +426,9 @@ hermes mcp <subcommand>
 
 | 子命令 | 描述 |
 |------------|-------------|
-| `serve [-v|--verbose]` | 将 Hermes 作为 MCP server 运行 — 向其他代理暴露对话。 |
-| `add <name> [--url URL] [--command CMD] [--args ...] [--auth oauth|header]` | 添加带有自动工具发现的 MCP server。 |
-| `remove <name>`（别名：`rm`） | 从 config 中移除 MCP server。 |
+| `serve [-v\|--verbose]` | 将 Hermes 作为 MCP server 运行 — 向其他代理暴露对话。 |
+| `add <名称> [--url URL] [--command CMD] [--args ...] [--auth oauth\|header]` | 添加带有自动工具发现的 MCP server。 |
+| `remove <名称>`（别名：`rm`） | 从 config 中移除 MCP server。 |
 | `list`（别名：`ls`） | 列出已配置的 MCP servers。 |
 | `test <name>` | 测试到 MCP server 的连接。 |
 | `configure <name>`（别名：`config`） | 切换 server 的工具选择。 |

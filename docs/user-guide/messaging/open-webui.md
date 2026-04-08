@@ -60,7 +60,7 @@ docker run -d -p 3000:8080 \
 
 ### 4. 打开 UI
 
-转到 **http://localhost:3000**。创建您的管理员账户（第一个用户成为管理员）。您应该在模型下拉菜单中看到 **hermes-agent**。开始聊天！
+转到 `http://localhost:3000`。创建您的管理员账户（第一个用户成为管理员）。您应该在模型下拉菜单中看到 **hermes-agent**。开始聊天！
 
 ## Docker Compose 设置
 
