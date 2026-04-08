@@ -32,14 +32,14 @@
   --text-muted: #a8a29e;
 
   /* Code block colors */
-  --code-bg: #1a1a2e;
-  --code-surface: #16162a;
-  --code-border: #2d2d4a;
-  --code-string: #a5d6ff;
-  --code-keyword: #c792ea;
-  --code-comment: #6b7280;
-  --code-function: #82aaff;
-  --code-number: #f78c6c;
+  --code-bg: #1e1e2e;
+  --code-surface: #181825;
+  --code-border: #313244;
+  --code-string: #a6e3a1;
+  --code-keyword: #cba6f7;
+  --code-comment: #6c7086;
+  --code-function: #89b4fa;
+  --code-number: #fab387;
 
   /* Typography */
   --font-heading: 'Crimson Pro', Georgia, serif;
