@@ -1,0 +1,98 @@
+{
+  "agents": [
+    {
+      "agent_id": "a307a683a1ce10bb1",
+      "agent_type": "writer-gs-core",
+      "started_at": "2026-04-08T06:38:29.960Z",
+      "parent_mode": "none",
+      "status": "completed",
+      "completed_at": "2026-04-08T07:00:57.615Z",
+      "duration_ms": 1347655
+    },
+    {
+      "agent_id": "afd9aec73b5f41ca6",
+      "agent_type": "writer-features",
+      "started_at": "2026-04-08T06:38:30.082Z",
+      "parent_mode": "none",
+      "status": "completed",
+      "completed_at": "2026-04-08T07:26:28.580Z",
+      "duration_ms": 2878498
+    },
+    {
+      "agent_id": "a72d4df434c7bdba7",
+      "agent_type": "writer-devguide",
+      "started_at": "2026-04-08T06:38:30.307Z",
+      "parent_mode": "none",
+      "status": "completed",
+      "completed_at": "2026-04-08T06:55:24.916Z",
+      "duration_ms": 1014609
+    },
+    {
+      "agent_id": "ac4255c6f152bb735",
+      "agent_type": "writer-ref-guides",
+      "started_at": "2026-04-08T06:38:30.382Z",
+      "parent_mode": "none",
+      "status": "completed",
+      "completed_at": "2026-04-08T08:05:33.879Z",
+      "duration_ms": 5223497
+    },
+    {
+      "agent_id": "a80c90ec3924322cc",
+      "agent_type": "writer-features",
+      "started_at": "2026-04-08T06:38:57.556Z",
+      "parent_mode": "none",
+      "status": "completed",
+      "completed_at": "2026-04-08T07:38:01.167Z",
+      "duration_ms": 3543611
+    },
+    {
+      "agent_id": "a41bc33e15b35d6b9",
+      "agent_type": "writer-devguide",
+      "started_at": "2026-04-08T06:55:25.419Z",
+      "parent_mode": "none",
+      "status": "completed",
+      "completed_at": "2026-04-08T06:55:52.749Z",
+      "duration_ms": 27330
+    },
+    {
+      "agent_id": "a6425e6f555317ac2",
+      "agent_type": "writer-gs-core",
+      "started_at": "2026-04-08T07:00:58.057Z",
+      "parent_mode": "none",
+      "status": "completed",
+      "completed_at": "2026-04-08T07:01:20.072Z",
+      "duration_ms": 22015
+    },
+    {
+      "agent_id": "a2222f9eb3e44b191",
+      "agent_type": "writer-features",
+      "started_at": "2026-04-08T07:26:28.988Z",
+      "parent_mode": "none",
+      "status": "completed",
+      "completed_at": "2026-04-08T07:26:47.035Z",
+      "duration_ms": 18047
+    },
+    {
+      "agent_id": "aa0353aff867851d5",
+      "agent_type": "writer-ref-guides",
+      "started_at": "2026-04-08T08:05:34.209Z",
+      "parent_mode": "none",
+      "status": "completed",
+      "completed_at": "2026-04-08T08:06:08.541Z",
+      "duration_ms": 34332
+    },
+    {
+      "agent_id": "a50de7a9bff235113",
+      "agent_type": "writer-ref-guides",
+      "started_at": "2026-04-08T08:06:08.913Z",
+      "parent_mode": "none",
+      "status": "completed",
+      "completed_at": "2026-04-08T08:06:25.964Z",
+      "duration_ms": 17051
+    }
+  ],
+  "total_spawned": 8,
+  "total_completed": 10,
+  "total_failed": 0,
+  "last_updated": "2026-04-08T08:07:25.035Z"
+}
