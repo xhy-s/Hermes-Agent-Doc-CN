@@ -1,7 +1,7 @@
 {
   "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"cd \\\"D:/Project/ai_project/Hermes-Agent-Doc-CN/website\\\" && npm run build 2>&1\",\"timeout\":300000}",
-  "error": "Exit code 1\n\n> hermes-agent-docs@1.0.0 build\n> docusaurus build\n\n\n ------------------------------------------------------------------------------                                                                                                         Update available 3.7.0 → 3.10.0                                                                                                                 To upgrade Docusaurus packages with the latest version, run the                                       foll...",
-  "timestamp": "2026-04-08T10:59:19.903Z",
+  "tool_input_preview": "{\"command\":\"cd D:/Project/ai_project/Hermes-Agent-Doc-CN && git add -A && git commit -m \\\"fix: code block font pure white\\\" && git push\",\"description\":\"Commit and push\"}",
+  "error": "Exit code 128\nwarning: in the working copy of '.omc/project-memory.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '.omc/state/idle-notif-cooldown.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'website/src/css/custom.css', LF will be replaced by CRLF the next time Git touches it\n[master 48f2d72] fix: code block font pure white\n 4 files changed, 5 insertions(+), 5 deletions(-)\nfatal: unable to access...",
+  "timestamp": "2026-04-08T16:56:04.122Z",
   "retry_count": 1
 }
