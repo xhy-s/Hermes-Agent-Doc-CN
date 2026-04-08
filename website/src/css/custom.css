@@ -78,6 +78,19 @@
 }
 
 /* Markdown content styling */
+.markdown {
+  color: #e0e0e8;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  color: #f0f0f5;
+}
+
 .markdown h1:first-child {
   margin-bottom: 1rem;
 }
@@ -85,6 +98,56 @@
 .markdown h2 {
   border-bottom: 1px solid rgba(34, 211, 238, 0.2);
   padding-bottom: 0.5rem;
+}
+
+.markdown p {
+  color: #d0d0dc;
+  line-height: 1.7;
+}
+
+.markdown a {
+  color: #22d3ee;
+}
+
+.markdown a:hover {
+  color: #3cdbee;
+}
+
+.markdown strong {
+  color: #f0f0f5;
+}
+
+.markdown li {
+  color: #d0d0dc;
+}
+
+.markdown code {
+  color: #22d3ee;
+  background: rgba(34, 211, 238, 0.1);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+/* Article content area */
+.article {
+  color: #d0d0dc;
+}
+
+.article h1,
+.article h2,
+.article h3,
+.article h4 {
+  color: #f0f0f5;
+}
+
+.article p {
+  color: #d0d0dc;
+  line-height: 1.7;
+}
+
+/* Doc main content */
+.docMainContainer {
+  color: #d0d0dc;
 }
 
 /* Code blocks */
