@@ -43,6 +43,12 @@
   },
   "hotPaths": [
     {
+      "path": "website\\src\\css\\custom.css",
+      "accessCount": 12,
+      "lastAccessed": 1775666706666,
+      "type": "file"
+    },
+    {
       "path": "",
       "accessCount": 3,
       "lastAccessed": 1775644955561,
@@ -52,12 +58,6 @@
       "path": "website\\src\\pages\\index.tsx",
       "accessCount": 3,
       "lastAccessed": 1775664904274,
-      "type": "file"
-    },
-    {
-      "path": "website\\src\\css\\custom.css",
-      "accessCount": 3,
-      "lastAccessed": 1775664974851,
       "type": "file"
     },
     {

@@ -389,6 +389,7 @@ pre[class*="language-"] > code {
   display: block;
   padding: 1.25rem 1.5rem !important;
   overflow-x: auto;
+  color: #e2e8f0 !important;
 }
 
 /* Syntax highlighting colors */
