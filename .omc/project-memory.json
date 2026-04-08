@@ -1,0 +1,107 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1775644916279,
+  "projectRoot": "D:\\Project\\ai_project\\Hermes-Agent-Doc-CN",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "docs"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 1,
+      "lastAccessed": 1775644916258,
+      "keyFiles": [
+        "index.md"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "",
+      "accessCount": 3,
+      "lastAccessed": 1775644955561,
+      "type": "directory"
+    },
+    {
+      "path": "website\\src\\pages\\index.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1775664904274,
+      "type": "file"
+    },
+    {
+      "path": "website\\src\\css\\custom.css",
+      "accessCount": 3,
+      "lastAccessed": 1775664974851,
+      "type": "file"
+    },
+    {
+      "path": "website\\src\\pages\\index.module.css",
+      "accessCount": 2,
+      "lastAccessed": 1775664950892,
+      "type": "file"
+    },
+    {
+      "path": "docs\\index.md",
+      "accessCount": 1,
+      "lastAccessed": 1775645006754,
+      "type": "file"
+    },
+    {
+      "path": "website\\docusaurus.config.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775645072488,
+      "type": "file"
+    },
+    {
+      "path": "website\\sidebars.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775645073533,
+      "type": "file"
+    },
+    {
+      "path": "website\\src\\data\\skills.json",
+      "accessCount": 1,
+      "lastAccessed": 1775645076032,
+      "type": "file"
+    },
+    {
+      "path": "website\\package.json",
+      "accessCount": 1,
+      "lastAccessed": 1775645079941,
+      "type": "file"
+    },
+    {
+      "path": "website\\tsconfig.json",
+      "accessCount": 1,
+      "lastAccessed": 1775645081157,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

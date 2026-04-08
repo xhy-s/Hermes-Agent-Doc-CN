@@ -1,7 +1,0 @@
-{
-  "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"cd \\\"D:/Project/ai_project/Hermes-Agent-Doc-CN\\\" && git remote -v\",\"description\":\"Check git remote configuration\"}",
-  "error": "Exit code 128\nfatal: not a git repository (or any of the parent directories): .git",
-  "timestamp": "2026-04-08T08:14:37.121Z",
-  "retry_count": 1
-}
