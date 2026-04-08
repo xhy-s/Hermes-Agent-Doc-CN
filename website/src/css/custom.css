@@ -1,52 +1,140 @@
 /* Custom theme for Digital Consciousness */
+/* Homepage: Dark | Doc pages: Light with warm tones */
 
+/* ============================================
+   LIGHT THEME VARIABLES (For Doc Pages)
+   ============================================ */
 :root {
-  --ifm-color-primary: #22d3ee;
-  --ifm-color-primary-dark: #1eb8cc;
-  --ifm-color-primary-darker: #1aa9bd;
-  --ifm-color-primary-darkest: #158a9a;
-  --ifm-color-primary-light: #3cdbee;
-  --ifm-color-primary-lighter: #4ae0ef;
-  --ifm-color-primary-lightest: #71e8f5;
+  /* Primary brand colors */
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(34, 211, 238, 0.1);
 
-  /* Dark theme overrides */
-  --ifm-background-color: #0a0a0f;
-  --ifm-background-surface-color: #0f0f19;
-  --ifm-footer-background-color: #0a0a0f;
-  --ifm-navbar-background-color: rgba(10, 10, 15, 0.95);
-  --ifm-sidebar-background: #0a0a0f;
+  /* Light theme - warm cream for doc pages */
+  --doc-background: #faf8f5;
+  --doc-background-secondary: #f5f3f0;
+  --doc-surface: #ffffff;
+  --doc-text: #374151;
+  --doc-text-secondary: #6b7280;
+  --doc-text-heading: #1f2937;
+  --doc-border: #e5e2dd;
+  --doc-accent: #2563eb;
+  --doc-accent-soft: rgba(37, 99, 235, 0.08);
+  --doc-glow: rgba(37, 99, 235, 0.15);
+
+  /* Navbar stays dark */
+  --ifm-navbar-background-color: rgba(15, 15, 25, 0.98);
+  --ifm-background-color: var(--doc-background);
 }
 
+/* ============================================
+   DARK THEME VARIABLES (For Homepage/Navbar)
+   ============================================ */
 [data-theme='dark'] {
-  --ifm-color-primary: #22d3ee;
-  --ifm-color-primary-dark: #1eb8cc;
-  --ifm-color-primary-darker: #1aa9bd;
-  --ifm-color-primary-darkest: #158a9a;
-  --ifm-color-primary-light: #3cdbee;
-  --ifm-color-primary-lighter: #4ae0ef;
-  --ifm-color-primary-lightest: #71e8f5;
-  --docusaurus-highlighted-code-line-bg: rgba(34, 211, 238, 0.15);
+  --ifm-color-primary: #60a5fa;
+  --ifm-color-primary-dark: #3b82f6;
+  --ifm-color-primary-darker: #2563eb;
+  --ifm-color-primary-darkest: #1d4ed8;
+  --ifm-color-primary-light: #93c5fd;
+  --ifm-color-primary-lighter: #bfdbfe;
+  --ifm-color-primary-lightest: #dbeafe;
 
   --ifm-background-color: #0a0a0f;
   --ifm-background-surface-color: #0f0f19;
   --ifm-footer-background-color: #0a0a0f;
-  --ifm-navbar-background-color: rgba(10, 10, 15, 0.95);
+  --ifm-navbar-background-color: rgba(10, 10, 20, 0.98);
+  --ifm-sidebar-background: #0a0a0f;
+
+  --docusaurus-highlighted-code-line-bg: rgba(96, 165, 250, 0.15);
 }
 
-/* Navbar styling */
+/* ============================================
+   ANIMATED BACKGROUND (Doc Pages Only)
+   ============================================ */
+.doc-wrapper {
+  position: relative;
+  min-height: 100vh;
+  background: var(--doc-background);
+}
+
+/* Floating gradient orbs for doc pages */
+.doc-wrapper::before,
+.doc-wrapper::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(80px);
+  opacity: 0.5;
+  animation: floatOrb 20s ease-in-out infinite;
+}
+
+.doc-wrapper::before {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.15), rgba(139, 92, 246, 0.1));
+  top: 10%;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.doc-wrapper::after {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.12), rgba(37, 99, 235, 0.08));
+  bottom: 20%;
+  right: -80px;
+  animation-delay: -10s;
+}
+
+@keyframes floatOrb {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, -30px) scale(1.05); }
+  50% { transform: translate(0, -50px) scale(1); }
+  75% { transform: translate(-30px, -20px) scale(0.95); }
+}
+
+/* Subtle grid pattern overlay */
+.doc-wrapper .container {
+  background:
+    linear-gradient(90deg, var(--doc-border) 1px, transparent 1px),
+    linear-gradient(var(--doc-border) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: -1px -1px;
+  opacity: 0.3;
+  position: relative;
+  z-index: 0;
+}
+
+.doc-wrapper .container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--doc-background);
+  opacity: 0.95;
+  z-index: -1;
+}
+
+/* ============================================
+   NAVBAR (Dark - consistent with homepage)
+   ============================================ */
 .navbar {
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(34, 211, 238, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: none;
-  background-color: rgba(10, 10, 15, 0.95) !important;
+  background: var(--ifm-navbar-background-color) !important;
 }
 
 .navbar__title {
   font-weight: 700;
-  color: #f0f0f5 !important;
-  background: linear-gradient(135deg, #22d3ee, #a855f7);
+  background: linear-gradient(135deg, #60a5fa, #a78bfa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -54,48 +142,89 @@
 
 .navbar__link,
 .navbar__link--active {
-  color: #f0f0f5 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
   font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .navbar__link:hover,
 .navbar__link--active:hover {
-  color: #22d3ee !important;
+  color: #60a5fa !important;
+}
+
+.navbar__item,
+.navbar-brand {
+  color: rgba(255, 255, 255, 0.95) !important;
 }
 
 [data-theme='dark'] .navbar {
-  background-color: rgba(10, 10, 15, 0.95) !important;
+  background: rgba(10, 10, 20, 0.98) !important;
 }
 
-.navbar-sidebar {
-  background-color: #0a0a0f;
+/* ============================================
+   DOC SIDEBAR (Light theme)
+   ============================================ */
+.theme-doc-sidebar-container {
+  background: var(--doc-surface) !important;
+  border-right: 1px solid var(--doc-border) !important;
+  box-shadow: 2px 0 20px rgba(0, 0, 0, 0.03);
 }
 
-.navbar__item {
-  color: #f0f0f5 !important;
+.menu {
+  background: transparent !important;
+  padding: 1rem 0.5rem;
 }
 
-.navbar-brand {
-  color: #f0f0f5 !important;
+.menu__link {
+  border-radius: 8px;
+  color: var(--doc-text-secondary) !important;
+  padding: 0.6rem 1rem;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Footer */
-.footer {
-  background-color: #0a0a0f;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+.menu__link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--doc-accent);
+  transform: scaleY(0);
+  transition: transform 0.2s ease;
 }
 
-.footer__link-item {
-  color: #a0a0b0;
+.menu__link:hover {
+  background: var(--doc-accent-soft) !important;
+  color: var(--doc-accent) !important;
 }
 
-.footer__link-item:hover {
-  color: #22d3ee;
+.menu__link:hover::before {
+  transform: scaleY(1);
 }
 
-/* Markdown content styling */
+.menu__link--active {
+  background: var(--doc-accent-soft) !important;
+  color: var(--doc-accent) !important;
+  font-weight: 600;
+}
+
+.menu__link--active::before {
+  transform: scaleY(1);
+}
+
+.menu__list-item-collapsible {
+  color: var(--doc-text-heading) !important;
+  font-weight: 600;
+}
+
+/* ============================================
+   DOC CONTENT AREA (Light theme)
+   ============================================ */
 .markdown {
-  color: #e0e0e8;
+  color: var(--doc-text);
 }
 
 .markdown h1,
@@ -104,167 +233,309 @@
 .markdown h4,
 .markdown h5,
 .markdown h6 {
-  color: #f0f0f5;
+  color: var(--doc-text-heading);
+  position: relative;
 }
 
-.markdown h1:first-child {
-  margin-bottom: 1rem;
+.markdown h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #1f2937, #374151);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .markdown h2 {
-  border-bottom: 1px solid rgba(34, 211, 238, 0.2);
-  padding-bottom: 0.5rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--doc-border);
+}
+
+.markdown h2::before {
+  content: '##';
+  position: absolute;
+  left: -3rem;
+  color: var(--doc-accent);
+  opacity: 0.3;
+  font-size: 1.5rem;
 }
 
 .markdown p {
-  color: #d0d0dc;
-  line-height: 1.7;
+  color: var(--doc-text);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
 }
 
 .markdown a {
-  color: #22d3ee;
+  color: var(--doc-accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.markdown a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--doc-accent);
+  transition: width 0.3s ease;
 }
 
 .markdown a:hover {
-  color: #3cdbee;
+  color: #1d4ed8;
+}
+
+.markdown a:hover::after {
+  width: 100%;
 }
 
 .markdown strong {
-  color: #f0f0f5;
+  color: var(--doc-text-heading);
+  font-weight: 700;
 }
 
 .markdown li {
-  color: #d0d0dc;
+  color: var(--doc-text);
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
 }
 
 .markdown code {
-  color: #22d3ee;
-  background: rgba(34, 211, 238, 0.1);
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
+  color: #1e40af;
+  background: rgba(37, 99, 235, 0.08);
+  padding: 0.2em 0.5em;
+  border-radius: 6px;
+  font-weight: 500;
+  border: 1px solid rgba(37, 99, 235, 0.15);
 }
 
-/* Article content area */
+/* Article content */
 .article {
-  color: #d0d0dc;
+  color: var(--doc-text);
+  background: var(--doc-surface);
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--doc-border);
 }
 
 .article h1,
 .article h2,
 .article h3,
 .article h4 {
-  color: #f0f0f5;
+  color: var(--doc-text-heading);
 }
 
 .article p {
-  color: #d0d0dc;
-  line-height: 1.7;
+  color: var(--doc-text);
+  line-height: 1.8;
 }
 
-/* Doc main content */
-.docMainContainer {
-  color: #d0d0dc;
-}
-
-/* Code blocks */
+/* ============================================
+   CODE BLOCKS
+   ============================================ */
 .prism-code {
-  border-radius: 12px;
-  border: 1px solid rgba(34, 211, 238, 0.2);
+  border-radius: 12px !important;
+  border: 1px solid var(--doc-border) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+  background: #1e293b !important;
 }
 
-/* Sidebar */
-.theme-doc-sidebar-container {
-  background: #0a0a0f !important;
-  border-right: 1px solid rgba(34, 211, 238, 0.1) !important;
+.codeBlockContainer_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module,
+pre {
+  background: #1e293b !important;
 }
 
-.menu {
-  background: #0a0a0f !important;
-  color: #d0d0dc !important;
-}
-
-.menu__link {
-  border-radius: 8px;
-  color: #c0c0cc !important;
-}
-
-.menu__link:hover {
-  background: rgba(34, 211, 238, 0.1);
-  color: #22d3ee !important;
-}
-
-.menu__link--active {
-  background: rgba(34, 211, 238, 0.15) !important;
-  color: #22d3ee !important;
-  font-weight: 600;
-}
-
-.menu__list-item-collapsible {
-  color: #f0f0f5 !important;
-}
-
-.theme-doc-sidebar-menu {
-  background: #0a0a0f;
-}
-
-/* Table styling */
+/* ============================================
+   TABLES (Light theme)
+   ============================================ */
 table {
   border-collapse: separate;
   border-spacing: 0;
-  border: 1px solid rgba(34, 211, 238, 0.2);
+  border: 1px solid var(--doc-border);
   border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
+  width: 100%;
 }
 
 th {
-  background: rgba(34, 211, 238, 0.1);
-  color: #22d3ee;
-  font-weight: 600;
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  color: var(--doc-text-heading);
+  font-weight: 700;
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 2px solid var(--doc-border);
 }
 
-td, th {
-  border-bottom: 1px solid rgba(34, 211, 238, 0.1);
+td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--doc-border);
+  color: var(--doc-text);
+}
+
+tr {
+  transition: background 0.2s ease;
+}
+
+tr:hover td {
+  background: var(--doc-accent-soft);
 }
 
 tr:last-child td {
   border-bottom: none;
 }
 
-/* Buttons */
+/* ============================================
+   BUTTONS
+   ============================================ */
 .button--primary {
-  background: linear-gradient(135deg, #22d3ee, #a855f7);
+  background: linear-gradient(135deg, var(--doc-accent), #7c3aed);
   border: none;
-  color: #0a0a0f;
+  color: white;
   font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--doc-glow);
 }
 
 .button--primary:hover {
-  background: linear-gradient(135deg, #3cdbee, #b975f8);
-  box-shadow: 0 4px 20px rgba(34, 211, 238, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--doc-glow);
 }
 
-/* Admonitions */
+/* ============================================
+   ADMONITIONS (Light theme)
+   ============================================ */
 .alert {
   border-radius: 12px;
   border-width: 1px;
+  border-left: 4px solid;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
 }
 
 .alert--info {
-  background: rgba(34, 211, 238, 0.1);
-  border-color: rgba(34, 211, 238, 0.3);
+  background: rgba(37, 99, 235, 0.06);
+  border-color: #2563eb;
+  border-left-color: #2563eb;
 }
 
 .alert--warning {
-  background: rgba(255, 215, 0, 0.1);
-  border-color: rgba(255, 215, 0, 0.3);
+  background: rgba(245, 158, 11, 0.06);
+  border-color: #f59e0b;
+  border-left-color: #f59e0b;
 }
 
 .alert--danger {
-  background: rgba(239, 68, 68, 0.1);
-  border-color: rgba(239, 68, 68, 0.3);
+  background: rgba(239, 68, 68, 0.06);
+  border-color: #ef4444;
+  border-left-color: #ef4444;
 }
 
 .alert--success {
-  background: rgba(34, 197, 94, 0.1);
-  border-color: rgba(34, 197, 94, 0.3);
+  background: rgba(34, 197, 94, 0.06);
+  border-color: #22c55e;
+  border-left-color: #22c55e;
+}
+
+/* ============================================
+   FOOTER (Dark)
+   ============================================ */
+.footer {
+  background: #0a0a0f !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer__link-item {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__link-item:hover {
+  color: #60a5fa;
+}
+
+/* ============================================
+   MOUSE FOLLOWER EFFECT (Doc pages)
+   ============================================ */
+.doc-wrapper {
+  cursor: default;
+}
+
+.doc-wrapper a,
+.doc-wrapper button,
+.markdown a {
+  cursor: pointer;
+}
+
+/* ============================================
+   SCROLLBAR (Light theme)
+   ============================================ */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--doc-background-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #cbd5e1, #94a3b8);
+  border-radius: 5px;
+  border: 2px solid var(--doc-background-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #94a3b8, #64748b);
+}
+
+/* ============================================
+   SEARCH BOX
+   ============================================ */
+.DocSearch-Button {
+  background: var(--doc-surface) !important;
+  border: 1px solid var(--doc-border) !important;
+  border-radius: 10px !important;
+  color: var(--doc-text-secondary) !important;
+}
+
+.DocSearch-Button:hover {
+  background: var(--doc-accent-soft) !important;
+  border-color: var(--doc-accent) !important;
+}
+
+.DocSearch-Button-Key {
+  background: var(--doc-background-secondary) !important;
+  border: 1px solid var(--doc-border) !important;
+}
+
+/* ============================================
+   PAGINATION
+   ============================================ */
+.pagination-nav__link {
+  border: 1px solid var(--doc-border) !important;
+  border-radius: 12px !important;
+  transition: all 0.3s ease;
+}
+
+.pagination-nav__link:hover {
+  background: var(--doc-accent-soft) !important;
+  border-color: var(--doc-accent) !important;
+}
+
+.pagination-nav__label {
+  color: var(--doc-text-heading) !important;
+  font-weight: 600;
+}
+
+.pagination-nav__sublabel {
+  color: var(--doc-text-secondary) !important;
 }
